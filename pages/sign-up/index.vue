@@ -1,10 +1,21 @@
 <template>
   <v-container class="fill-height ma-0" fluid>
     <v-row justify="center">
-      <v-col cols="12" sm="10" md="8" lg="5">
-        <v-card ref="form">
-          <v-card-title>Sign In</v-card-title>
+      <v-col cols="12" sm="10" md="8" lg="6">
+        <v-card ref="form" class="pa-md-4 mx-lg-auto">
+          <v-card-title>
+            Sign Up
+          </v-card-title>
           <v-card-text>
+            <v-text-field
+              ref="name"
+              v-model="name"
+              :rules="[() => !!name || 'This field is required']"
+              :error-messages="errorMessages"
+              label="Full Name"
+              placeholder="Monkey King"
+              required
+            />
             <v-text-field
               ref="email"
               v-model="email"
@@ -25,33 +36,19 @@
               counter
               @click:append="show1 = !show1"
             />
-            <span>Forget your account? <a href="#" color="primary"> Remember it! </a></span>
+            <v-checkbox
+              v-model="terms"
+              label="I agree to Money King's terms"
+              color="indigo"
+              value="1"
+              hide-details
+              required
+            />
           </v-card-text>
-          <!-- <v-divider class="mt-12"></v-divider> -->
           <v-card-actions>
-            <!-- <v-btn text>Cancel</v-btn> -->
-            <v-spacer/>
-            <!-- <v-slide-x-reverse-transition>
-            <v-tooltip
-              v-if="formHasErrors"
-              left
-            >
-              <template v-slot:activator="{ on }">
-                <v-btn
-                  icon
-                  class="my-0"
-                  @click="resetForm"
-                  v-on="on"
-                >
-                  <v-icon>mdi-refresh</v-icon>
-                </v-btn>
-              </template>
-              <span>Refresh form</span>
-            </v-tooltip>
-          </v-slide-x-reverse-transition> -->
-            <v-btn depressed>
-SIGN IN
-</v-btn>
+            <v-btn block large text class="primary text-none" to="/register/business">
+              Submit
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -64,7 +61,7 @@ export default {
   layout: 'empty',
   head () {
     return {
-      title: 'Sign In'
+      title: 'Sign Up'
     }
   },
   data () {
@@ -80,3 +77,7 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+</style>

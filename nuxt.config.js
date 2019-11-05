@@ -37,6 +37,22 @@ export default {
      */
   plugins: [
     '~/plugins/component-register',
+    '~/plugins/component-profit',
+    '~/plugins/component-cost',
+    '~/plugins/component-cash-in',
+    '~/plugins/component-cash-out',
+    '~/plugins/component-debt',
+    '~/plugins/component-loan',
+    '~/plugins/component-draft',
+    '~/plugins/component-staff',
+    '~/plugins/component-invoice',
+    '~/plugins/component-account',
+    '~/plugins/component-balance-sheet',
+    '~/plugins/component-cash-flow',
+    '~/plugins/component-profit-lost',
+    '~/plugins/component-journal',
+    '~/plugins/component-product',
+    '~/plugins/component-category',
     { src: '@/plugins/chart', ssr: false }
   ],
   /*
