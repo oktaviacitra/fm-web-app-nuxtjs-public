@@ -1,6 +1,6 @@
-# moneyking
+# Money King
 
-> My groovy Nuxt.js project
+> Financial Management Application for Chief Financial Officer at StartUp to make it easier for the future producing.
 
 ## Build Setup
 
