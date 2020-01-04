@@ -5,6 +5,11 @@
 - Collaborate between campus and industry, EEPIS and Maulidan Games
 - Worked on for 4 months and divided into 3 stages including UI/UX Process, Development, and Refinement.
 
+## Libraries
+- Vuetify
+- Chart.JS
+- Axios
+
 ## Build Setup
 
 ``` bash
